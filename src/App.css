@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-y:visible;
+  overflow-x: hidden;
+  font-size: 1.15rem;
+  font-family: "Montserrat", sans-serif;
+  background-color: #3d405b;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.container {
+  margin: 1rem 2rem;
+  height: 100vh;
+  display:flex;
   flex-direction: column;
   align-items: center;
+}
+
+.pokemon-header {
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 0.25rem;
+  font-weight: 600;
+  color: #81b29a;
+  margin: 3rem 0;
+}
+.pokemon-list-container {
+    align-items: center;
+    background-color: #f4f1de;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    padding: 0 1rem;
+}
+button{
+    background-color: #81b29a;
+    transition: .2s ease-in-out;
+    border: none;
+    border-radius: 12px;
+    color: #3d405b;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.7rem 1.3rem;
+    margin:2rem;
+}
+button:hover{
+    background-color: green;
+    color:white;
+}
+.pokemon-list-detailed {
+  background-color: #f4f1de;
+  border-radius: 12px;
+  height: 300px;
+  left: 41%;
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  width: 270px;
+}
+.detail-name {
+  color: #3d405b;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.detail-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.detail-close {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin: 1rem 1rem 0 auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.detail-info {
+  align-items: center;
+  background-color: #f2cc8f;
+  background-image: linear-gradient(0deg,#f2cc8f,#f8f3d9);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.detail-skill {
+  align-self: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem;
+  text-align: start;
+}
+.overlay {
+  height: 100vh;
+  width: 100vw;
 }
